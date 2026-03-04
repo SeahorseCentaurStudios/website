@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seahorse Centaur Studios</title>
+  <meta name="description" content="Seahorse Centaur Studios makes smart, joyful games for kids — with no ads, ever." />
+
+  <!-- Basic social preview (optional) -->
+  <meta property="og:title" content="Seahorse Centaur Studios" />
+  <meta property="og:description" content="Smart, joyful games for kids — with no ads, ever." />
+  <!-- <meta property="og:image" content="assets/og-image.png" /> -->
+
+  <style>
+    :root{
+      --bg: #fbfbfa;
+      --card: #ffffff;
+      --text: #14202b;
+      --muted: #52606d;
+      --line: rgba(20, 32, 43, .12);
+      --accent: #2aa9e0;   /* tweak to match your palette */
+      --accent2: #ffd36a;  /* optional secondary */
+      --shadow: 0 10px 30px rgba(20, 32, 43, .08);
+      --radius: 18px;
+      --max: 1040px;
+    }
+
+    *{ box-sizing: border-box; }
+    html, body { height: 100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 30% 0%, rgba(42,169,224,.10), transparent 55%),
+                  radial-gradient(900px 600px at 85% 10%, rgba(255,211,106,.14), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.45;
+    }
+
+    a{ color: inherit; }
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 20px 64px;
+    }
+
+    /* Top bar */
+    header{
+      display:flex;
+      align-items:center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 8px 0 18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand img{
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 12px;
+      /* If your logo has transparency, you can remove the background below */
+      background: rgba(255,255,255,.7);
+      box-shadow: 0 6px 16px rgba(20,32,43,.08);
+    }
+
+    .brand .name{
+      display:flex;
+      flex-direction: column;
+      min-width:0;
+    }
+
+    .brand .name strong{
+      font-weight: 750;
+      letter-spacing: .2px;
+      font-size: 15px;
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand .name span{
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow:hidden;
+      text-overflow: ellipsis;
+    }
+
+    nav{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.7);
+      text-decoration:none;
+      font-weight: 650;
+      font-size: 13px;
+    }
+    .pill:hover{ border-color: rgba(42,169,224,.45); }
+
+    /* Hero */
+    .hero{
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 18px;
+      padding: 22px 0 10px;
+      align-items: stretch;
+    }
+
+    .hero-card{
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px 22px;
+      overflow:hidden;
+      position: relative;
+    }
+
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      inset: -60px -80px auto auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle at 40% 40%, rgba(42,169,224,.24), transparent 60%);
+      transform: rotate(15deg);
+      pointer-events:none;
+    }
+
+    h1{
+      margin: 0 0 10px;
+      font-size: clamp(30px, 3.3vw, 44px);
+      line-height: 1.05;
+      letter-spacing: -.6px;
+    }
+
+    .lede{
+      margin: 0 0 14px;
+      font-size: 16px;
+      color: var(--muted);
+      max-width: 56ch;
+    }
+
+    .cta{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap: 8px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.9);
+      text-decoration:none;
+      font-weight: 750;
+      font-size: 14px;
+    }
+    .btn.primary{
+      border-color: rgba(42,169,224,.65);
+      background: linear-gradient(180deg, rgba(42,169,224,.20), rgba(42,169,224,.08));
+    }
+    .btn:hover{ transform: translateY(-1px); }
+
+    .badge-card{
+      background: rgba(255,255,255,.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      gap: 10px;
+    }
+
+    .badge-card img{
+      width: min(230px, 100%);
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 18px rgba(20,32,43,.12));
+    }
+
+    .badge-card .badge-caption{
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* Sections */
+    section{
+      margin-top: 28px;
+      padding-top: 6px;
+    }
+
+    .section-title{
+      display:flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+      margin: 0 0 12px;
+    }
+
+    h2{
+      margin: 0;
+      font-size: 18px;
+      letter-spacing: -.2px;
+    }
+
+    .section-sub{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .card{
+      background: rgba(255,255,255,.78);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+
+    /* Game card */
+    .game{
+      display:grid;
+      grid-template-columns: 90px 1fr;
+      gap: 14px;
+      align-items:center;
+    }
+
+    .game-logo{
+      width: 90px;
+      height: 90px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.92);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      overflow:hidden;
+    }
+
+    .game-logo img{
+      width: 88%;
+      height: 88%;
+      object-fit: contain;
+    }
+
+    .game h3{
+      margin: 0 0 4px;
+      font-size: 16px;
+      letter-spacing: -.2px;
+    }
+
+    .game p{
+      margin: 0 0 10px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .store-row{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .store{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.92);
+      text-decoration:none;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    .store:hover{ border-color: rgba(20,32,43,.22); }
+
+    /* Philosophy */
+    .philosophy p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 72ch;
+    }
+    .philosophy p + p{ margin-top: 10px; }
+
+    /* Footer */
+    footer{
+      margin-top: 34px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display:flex;
+      flex-wrap: wrap;
+      align-items:center;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .footer-links a{
+      text-decoration:none;
+      border-bottom: 1px solid transparent;
+    }
+    .footer-links a:hover{
+      border-bottom-color: rgba(82,96,109,.55);
+    }
+
+    /* Responsive */
+    @media (max-width: 860px){
+      .hero{ grid-template-columns: 1fr; }
+      nav{ justify-content: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header>
+      <div class="brand">
+        <!-- Replace with your studio logo -->
+        <img src="assets/seahorse-centaur-logo.png" alt="Seahorse Centaur Studios logo" />
+        <div class="name">
+          <strong>Seahorse Centaur Studios</strong>
+          <span>No ads. Just play.</span>
+        </div>
+      </div>
+
+      <nav aria-label="Primary">
+        <a class="pill" href="#games">Games</a>
+        <a class="pill" href="#philosophy">Why No Ads</a>
+        <a class="pill" href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <div class="hero">
+        <div class="hero-card">
+          <h1>Smart, joyful games for kids — with no ads, ever.</h1>
+          <p class="lede">
+            Made by parents who believe play should be uninterrupted.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#games">🎮 View our games</a>
+            <a class="btn" href="#philosophy">🛡 Our promise</a>
+          </div>
+        </div>
+
+        <aside class="badge-card" aria-label="No ads badge">
+          <!-- Replace with your shield badge image -->
+          <img src="assets/no-ads-just-play-badge.png" alt="No ads. Just play! badge" />
+          <p class="badge-caption">A simple promise to families.</p>
+        </aside>
+      </div>
+
+      <!-- GAMES -->
+      <section id="games" aria-label="Our games">
+        <div class="section-title">
+          <h2>Our Games</h2>
+          <p class="section-sub">More coming soon.</p>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="game">
+              <div class="game-logo">
+                <!-- Replace with Shelf Puppies logo -->
+                <img src="assets/shelf-puppies-logo.png" alt="Shelf Puppies logo" />
+              </div>
+
+              <div>
+                <h3>Shelf Puppies!</h3>
+                <p>A cozy puzzle game about shelving the silliest pups.</p>
+		<p>Coming soon where apps are sold!</p>
+                <div class="store-row" aria-label="Store links">
+                  <!-- Replace # with your real store URLs when ready -->
+                  <a class="store" href="#" rel="noopener"> App Store</a>
+                  <a class="store" href="#" rel="noopener">▶ Google Play</a>
+                  <a class="store" href="#" rel="noopener">🛒 Amazon Appstore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Duplicate this card as you add more games -->
+          <!--
+          <div class="card">
+            <div class="game">
+              <div class="game-logo">
+                <img src="assets/another-game-logo.png" alt="Another Game logo" />
+              </div>
+              <div>
+                <h3>Another Game</h3>
+                <p>One-line description.</p>
+                <div class="store-row">
+                  <a class="store" href="#"> App Store</a>
+                  <a class="store" href="#">▶ Google Play</a>
+                  <a class="store" href="#">🛒 Amazon Appstore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          -->
+        </div>
+      </section>
+
+      <!-- PHILOSOPHY -->
+      <section id="philosophy" aria-label="Why we make games">
+        <div class="section-title">
+          <h2>Why we make games</h2>
+          <p class="section-sub">A small studio with a simple rule.</p>
+        </div>
+
+        <div class="card philosophy">
+          <p>
+            As parents, we saw how often advertising interrupted our children’s imagination and focus.
+            Kids deserve digital spaces that respect their curiosity.
+          </p>
+          <p>
+            That’s why we make games with <strong>no ads</strong>. Ever.
+          <br>  
+	  <br>
+	  <strong>No ads. Just play.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- FOOTER / CONTACT -->
+      <footer id="contact" aria-label="Footer">
+        <div>
+          <strong>Seahorse Centaur Studios LLC</strong> · © <span id="year"></span>
+        </div>
+
+        <div class="footer-links">
+          <!-- Replace with your email -->
+          <a href="mailto:hello@seahorsecentaur.com">hello@seahorsecentaur.com</a>
+          <!-- Replace or remove -->
+          <a href="#" rel="noopener">Press</a>
+          <a href="#" rel="noopener">Privacy</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    // Set current year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

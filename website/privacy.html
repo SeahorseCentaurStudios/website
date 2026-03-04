@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Privacy Policy — Seahorse Centaur Studios</title>
+  <meta name="description" content="Privacy policy for Seahorse Centaur Studios." />
+  <style>
+    :root{
+      --bg: #fbfbfa; --text:#14202b; --muted:#52606d; --line: rgba(20,32,43,.12);
+      --shadow: 0 10px 30px rgba(20,32,43,.08); --radius:18px; --max: 920px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg); color: var(--text); line-height:1.6;
+    }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 28px 20px 64px; }
+    header{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding-bottom: 12px; }
+    .brand{ display:flex; align-items:center; gap:12px; }
+    .brand img{ width:54px; height:54px; object-fit:contain; border-radius:14px; background:#fff; box-shadow: var(--shadow); padding:6px; }
+    a{ color: inherit; }
+    .card{
+      background: rgba(255,255,255,.88);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      margin-top: 14px;
+    }
+    h1{ margin: 8px 0 0; font-size: 30px; letter-spacing:-.4px; }
+    h2{ margin: 0 0 8px; font-size: 16px; }
+    p{ margin: 0; color: var(--muted); }
+    p + p{ margin-top: 10px; }
+    ul{ margin: 10px 0 0 20px; color: var(--muted); }
+    li{ margin: 6px 0; }
+    .meta{ color: var(--muted); font-size: 13px; margin-top: 6px; }
+    footer{ margin-top: 22px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px;}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <img src="assets/seahorse-centaur-logo.png" alt="Seahorse Centaur Studios logo" />
+        <div>
+          <div style="font-weight:800;">Seahorse Centaur Studios</div>
+          <div class="meta">No ads. Just play.</div>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <span class="meta"> · </span>
+        <a href="press.html">Press</a>
+      </nav>
+    </header>
+
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective date: <strong>March 4, 2026</strong></div>
+
+    <div class="card">
+      <h2>Our Promise</h2>
+      <p>
+        Seahorse Centaur Studios makes kids’ games with <strong>no ads</strong>. We aim to collect as little information as possible.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Information We Collect</h2>
+      <p>We may collect limited information depending on how you use our website and games:</p>
+      <ul>
+        <li><strong>Website contact email:</strong> If you email us, we receive your email address and the content of your message.</li>
+        <li><strong>App store information:</strong> Purchases and subscriptions are processed by Apple, Google, or Amazon. We do not receive your payment card details.</li>
+        <li><strong>Crash/diagnostic data (optional):</strong> If enabled in an app, we may receive anonymized crash logs to improve stability.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Information We Do Not Collect</h2>
+      <ul>
+        <li>We do not show third-party ads.</li>
+        <li>We do not sell personal information.</li>
+        <li>We do not knowingly collect personal information from children beyond what is necessary to provide the service.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>How We Use Information</h2>
+      <ul>
+        <li>To respond to messages you send us.</li>
+        <li>To improve our games (for example, fixing bugs).</li>
+        <li>To comply with legal obligations.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Third-Party Services</h2>
+      <p>
+        Our games may be distributed through third-party platforms (Apple App Store, Google Play, Amazon Appstore). These platforms may collect information under their own privacy policies.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Children’s Privacy</h2>
+      <p>
+        Our games are designed for kids and families. We strive to respect children’s privacy and comply with applicable laws (such as COPPA in the United States).
+        If you believe we have collected personal information from a child in error, please contact us and we will work to delete it.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Data Retention</h2>
+      <p>
+        We keep information only as long as needed for the purposes described above, unless a longer retention period is required by law.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Contact Us</h2>
+      <p>
+        If you have questions about this policy, contact us at
+        <a href="mailto:hello@seahorsecentaur.com">hello@seahorsecentaur.com</a>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>Changes to This Policy</h2>
+      <p>
+        We may update this policy from time to time. We will update the “Effective date” above when changes are made.
+      </p>
+    </div>
+
+    <footer>
+      <div>© <span id="year"></span> Seahorse Centaur Studios LLC</div>
+      <div><a href="index.html">Home</a> · <a href="press.html">Press</a></div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
