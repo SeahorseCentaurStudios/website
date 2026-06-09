@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Shelf Puppies! — No Ads. Just Play.</title>
+  <meta name="description" content="Shelf Puppies! is a cozy sorting game for kids. No ads. Ever." />
+
+  <meta property="og:title" content="Shelf Puppies!" />
+  <meta property="og:description" content="A cozy sorting game for kids. No ads. Ever." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://seahorsecentaur.com/shelfpuppies/" />
+  <meta property="og:image" content="https://seahorsecentaur.com/shelfpuppies/shelf-puppies-preview.png" />
+
+  <style>
+    :root {
+      --bg1: #fff5d6;
+      --bg2: #ffd9ef;
+      --ink: #3b2a45;
+      --accent: #ff7ab6;
+      --accent2: #6ec6ff;
+      --card: rgba(255, 255, 255, 0.82);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, var(--bg2), transparent 34rem),
+        linear-gradient(135deg, var(--bg1), #e3f7ff);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(720px, 100%);
+      background: var(--card);
+      border-radius: 32px;
+      padding: 32px 24px;
+      text-align: center;
+      box-shadow: 0 18px 50px rgba(59, 42, 69, 0.16);
+    }
+
+    .logo {
+      max-width: 220px;
+      width: 70%;
+      margin: 0 auto 12px;
+      display: block;
+    }
+
+    h1 {
+      font-size: clamp(2.4rem, 8vw, 4.5rem);
+      line-height: 0.95;
+      margin: 0;
+    }
+
+    .tagline {
+      font-size: clamp(1.2rem, 4vw, 1.7rem);
+      margin: 14px auto 8px;
+      font-weight: 700;
+    }
+
+    .no-ads {
+      display: inline-block;
+      margin: 12px 0 24px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: white;
+      border: 3px solid var(--accent);
+      font-weight: 900;
+      letter-spacing: 0.03em;
+    }
+
+    .screenshot {
+      max-width: 320px;
+      width: 88%;
+      border-radius: 28px;
+      margin: 0 auto 26px;
+      display: block;
+      box-shadow: 0 14px 32px rgba(59, 42, 69, 0.18);
+    }
+
+    .buttons {
+      display: grid;
+      gap: 14px;
+      margin: 0 auto 24px;
+      max-width: 360px;
+    }
+
+    .button {
+      display: block;
+      text-decoration: none;
+      color: white;
+      background: var(--ink);
+      border-radius: 18px;
+      padding: 16px 20px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      box-shadow: 0 8px 0 rgba(59, 42, 69, 0.18);
+    }
+
+    .button.apple { background: #222; }
+    .button.google { background: #2e7d32; }
+
+    .small {
+      font-size: 0.95rem;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    footer {
+      margin-top: 24px;
+      font-size: 0.9rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <!-- Optional: replace with your actual logo, or delete this image tag -->
+    <img class="logo" src="shelf-puppies-logo.png" alt="Shelf Puppies logo" />
+
+    <h1>Shelf Puppies!</h1>
+
+    <p class="tagline">A cozy sorting game for kids</p>
+
+    <div class="no-ads">No ads. Ever.</div>
+
+    <!-- Replace with an actual screenshot -->
+    <img class="screenshot" src="shelf-puppies-screenshot.png" alt="Screenshot of Shelf Puppies gameplay" />
+
+    <div class="buttons">
+      <a class="button apple" href="PASTE_APP_STORE_LINK_HERE">
+        Download on the App Store
+      </a>
+
+      <a class="button google" href="PASTE_GOOGLE_PLAY_LINK_HERE">
+        Get it on Google Play
+      </a>
+    </div>
+
+    <p class="small">Put the puppies on the shelves. Put everything else in the trash!</p>
+
+    <footer>
+      Seahorse Centaur Studios · No ads. Just play.
+    </footer>
+  </main>
+</body>
+</html>
