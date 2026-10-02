@@ -276,6 +276,16 @@
       font-size: 13px;
     }
 
+    .signup-card{
+      display:grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      align-items:center;
+    }
+    .signup-card p{ margin: 6px 0 0; color: var(--muted); font-size: 14px; max-width: 62ch; }
+    .signup-action{ min-width: 190px; text-align:center; }
+    .signup-note{ display:block; margin-top: 7px; color: var(--muted); font-size: 11px; }
+
     .philosophy p{
       margin: 0;
       color: var(--muted);
@@ -303,6 +313,8 @@
 
     @media (max-width: 860px){
       .hero{ grid-template-columns: 1fr; }
+      .signup-card{ grid-template-columns: 1fr; }
+      .signup-action{ text-align:left; }
       nav{ justify-content: flex-start; }
     }
   </style>
@@ -322,6 +334,8 @@
       <nav aria-label="Primary">
         <a class="pill" href="#games">Games</a>
         <a class="pill" href="#philosophy">Why No Ads</a>
+        <a class="pill" href="#updates">Updates</a>
+        <a class="pill" href="support.html">Support</a>
         <a class="pill" href="press.html">Press</a>
         <a class="pill" href="privacy.html">Privacy</a>
       </nav>
@@ -376,7 +390,7 @@
          <div class="card">
           <div class="game">
             <div class="game-logo placeholder">
-              <img src="assets/tmp.png" alt="Pandagrams logo" />
+              <img src="assets/pandagrams-logo.png" alt="Pandagrams logo" />
             </div>
 
             <div>
@@ -388,6 +402,23 @@
                 <a class="store" href="#" rel="noopener">🛒 Amazon Appstore</a>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="updates" aria-label="Studio updates">
+        <div class="section-title">
+          <h2>Keep in touch</h2>
+          <p class="section-sub">For parents &amp; grown-ups.</p>
+        </div>
+
+        <div class="card signup-card">
+          <div>
+            <strong>Want to know when we make something new?</strong>
+            <p>Get occasional emails about new Seahorse Centaur games and opportunities for families to help us test upcoming games. No spam, no ads.</p>
+          </div>
+          <div class="signup-action">
+            <script async data-uid="e765b0f474" src="https://seahorse-centaur-studios.kit.com/e765b0f474/index.js"></script>
           </div>
         </div>
       </section>
@@ -416,6 +447,7 @@
         </div>
 
         <div class="footer-links">
+          <a href="support.html">Support</a>
           <a href="mailto:hello@seahorsecentaur.com">hello@seahorsecentaur.com</a>
           <a href="press.html">Press</a>
           <a href="privacy.html">Privacy</a>
